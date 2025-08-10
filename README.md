@@ -3,7 +3,7 @@
 Aplicación de escritorio (Swing) con CRUD de **Proyectos**, **Tareas** y **Usuarios**, 
 seguimiento de avance y registro de errores en base de datos. Preparada para Ant.
 
-## Requisitos
+## Requisitos para que funcione
 - Java 17 (o 11)
 - Ant
 - SQL Server (Express sirve)
