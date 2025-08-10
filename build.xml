@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="GestorProyectosSwingAnt" default="run" basedir=".">
+    <!-- Carpetas -->
+    <property name="src.dir" value="src"/>
+    <property name="build.dir" value="build"/>
+    <property name="classes.dir" value="${build.dir}/classes"/>
+    <property name="dist.dir" value="dist"/>
+    <property name="lib.dir" value="lib"/>
+    <property name="main.class" value="com.utn.gestor.App"/>
+
+    <!-- Classpath: toma todos los .jar de /lib -->
+    <path id="classpath">
+        <fileset dir="${lib.dir}" includes="**/*.jar"/>
+    </path>
+
+    <!-- Limpieza -->
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+        <delete dir="${dist.dir}"/>
+    </target>
+
+    <!-- Compilación -->
+    <target name="compile">
+        <mkdir dir="${classes.dir}"/>
+        <javac srcdir="${src.dir}"
+               destdir="${classes.dir}"
+               includeantruntime="false"
+               encoding="UTF-8"
+               debug="true">
+            <classpath refid="classpath"/>
+        </javac>
+        <!-- Copiar recursos (config.properties) al directorio de clases -->
+        <copy todir="${classes.dir}">
+            <fileset dir="resources"/>
+        </copy>
+    </target>
+
+    <!-- Ejecutar en desarrollo -->
+    <target name="run" depends="compile">
+        <java fork="true"
+              classname="${main.class}"
+              dir="."
+              failonerror="true">
+            <classpath>
+                <pathelement path="${classes.dir}"/>
+                <path refid="classpath"/>
+            </classpath>
+        </java>
+    </target>
+
+    <!-- Empaquetar JAR ejecutable -->
+    <target name="jar" depends="compile">
+        <mkdir dir="${dist.dir}"/>
+        <jar destfile="${dist.dir}/GestorProyectosSwingAnt.jar" basedir="${classes.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="${main.class}"/>
+                <!-- Para ejecutar el JAR doble‑click o con 'java -jar', este Class-Path debe
+                     apuntar al nombre del driver dentro de /lib. Asegúrate de que exista. -->
+                <attribute name="Class-Path" value="lib/postgresql.jar"/>
+            </manifest>
+        </jar>
+    </target>
+</project>
