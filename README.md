@@ -2,6 +2,15 @@
 
 Aplicación de escritorio desarrollada con **Java Swing**, que permite gestionar **Proyectos**, **Tareas** y **Usuarios**. La aplicación ofrece funcionalidades de **CRUD**, seguimiento del avance de los proyectos y registro de errores en la base de datos. Está configurada para ser ejecutada con **Ant** y está conectada a **PostgreSQL** para la persistencia de datos.
 
+## Integrantes
+
+- **Vanessa**
+- **Pamela**
+- **Nazareth**
+
+
+---
+
 ## Tecnologías y Herramientas Utilizadas
 
 - **Java 17** (o 11) — Lenguaje de programación principal.
@@ -16,7 +25,7 @@ Aplicación de escritorio desarrollada con **Java Swing**, que permite gestionar
 
 ### Software Necesario:
 
-- **Java 17 (o 11)**: Asegúrate de tener Java instalado en tu máquina. Puedes verificarlo con:
+1. **Java 17 (o 11)**: Asegúrate de tener Java instalado en tu máquina. Puedes verificarlo con:
 
-  ```bash
-  java -version
+   ```bash
+   java -version
