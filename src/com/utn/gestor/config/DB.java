@@ -1,10 +1,10 @@
 package com.utn.gestor.config;
 
-import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
+import java.io.InputStream;
 
 public class DB {
     private static String URL;
@@ -23,7 +23,6 @@ public class DB {
             } else {
                 throw new RuntimeException("No se encontró config.properties");
             }
-            // Driver JDBC se carga automáticamente desde Java 6+ si el jar está en classpath
         } catch (Exception e) {
             throw new RuntimeException("Error cargando configuración DB: " + e.getMessage(), e);
         }
