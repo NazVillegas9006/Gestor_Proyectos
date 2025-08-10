@@ -1,43 +1,22 @@
-# Gestor de Proyectos — Java Swing + Ant + SQL Server
+# Gestor de Proyectos — Java Swing + Ant + PostgreSQL
 
-Aplicación de escritorio (Swing) con CRUD de **Proyectos**, **Tareas** y **Usuarios**, 
-seguimiento de avance y registro de errores en base de datos. Preparada para Ant.
+Aplicación de escritorio desarrollada con **Java Swing**, que permite gestionar **Proyectos**, **Tareas** y **Usuarios**. La aplicación ofrece funcionalidades de **CRUD**, seguimiento del avance de los proyectos y registro de errores en la base de datos. Está configurada para ser ejecutada con **Ant** y está conectada a **PostgreSQL** para la persistencia de datos.
 
-## Requisitos para que funcione
-- Java 17 (o 11)
-- Ant
-- SQL Server (Express sirve)
-- Driver JDBC de SQL Server en `lib/sqljdbc42.jar` (copiarlo a esa ruta)
-- Crear BD ejecutando `scripts/database.sql`
+## Tecnologías y Herramientas Utilizadas
 
-## Configuración
-Editar `resources/config.properties`:
-```
-db.url=jdbc:sqlserver://localhost:1433;databaseName=gestor_proyectos;encrypt=false
-db.user=sa
-db.pass=1123206
-```
+- **Java 17** (o 11) — Lenguaje de programación principal.
+- **Swing** — Para la interfaz gráfica de usuario (GUI).
+- **Ant** — Herramienta de construcción para automatizar la compilación y ejecución.
+- **PostgreSQL** — Base de datos para almacenar la información.
+- **JDBC** — Para la conexión a la base de datos.
 
-> Ajusta usuario/contraseña/puerto según tu entorno.
+---
 
-## Ejecutar
-```bash
-ant run            # compila y ejecuta
-ant jar            # genera dist/GestorProyectosSwingAnt.jar
-```
+## Requisitos
 
-## Estructura
-- `src/com/utn/gestor/...` código fuente (modelo/dao/servicio/ui)
-- `resources/config.properties` configuración DB
-- `scripts/database.sql` creación de tablas y datos de prueba
-- `build.xml` script Ant
+### Software Necesario:
 
-## Despliegue en la nube (ideas)
-- Empaqueta con JAR y publicar en un VPS o en escritorio remoto.
-- Alternativa web: portar lógica a Spring Boot + Thymeleaf y publicar en Render/Azure Web App.
+- **Java 17 (o 11)**: Asegúrate de tener Java instalado en tu máquina. Puedes verificarlo con:
 
-## Credenciales demo
-- Usuarios insertados en `scripts/database.sql` (admin/admin123, user/user123).
-
-## Logs de error
-Errores se guardan en tabla `log_errores` con traza, controlador y fecha.
+  ```bash
+  java -version
