@@ -5,7 +5,7 @@ Aplicación de escritorio desarrollada con **Java Swing**, que permite gestionar
 ## Integrantes
 
 - **Vanessa**
-- **Pamela Espinoza**
+- **Pamela Espinoza Potoy**
 - **Nazareth**
 
 
