@@ -4,9 +4,9 @@ Aplicación de escritorio desarrollada con **Java Swing**, que permite gestionar
 
 ## Integrantes
 
-- **Vanessa**
-- **Pamela**
-- **Nazareth**
+- **Vanessa Mairena Solano **
+- **Pamela Espinoza Potoy **
+- **Nazareth Villegas Villalobos**
 
 
 ---
